@@ -7,5 +7,16 @@ window.onload = function(){
 		this.setAttribute('class','boundary youlose');
 	});
 
+    
+    var boundaries = document.querySelectorAll('.boundary');
+    for (var i = 0; i < boundaries.length; i++) {
+        boundaries[i].onmouseover = overBoundary;
+    };
+    
+    function overBoundary(){
+        for (var i = 0; i < boundaries.length; i++) {
+        boundaries[i].setAttribute('class','boundary youlose');
+    }
 };
 
+}
