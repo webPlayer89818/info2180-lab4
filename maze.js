@@ -25,7 +25,8 @@ window.onload = function(){
     //function alerts user to loss and changes boundaries of all walls
     function overBoundary(){
         gameStatus = false;
-        alert('You Lose!');
+        //alert('You Lose!');
+        document.getElementById("status").innerHTML = "You Lose!";
         for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].setAttribute('class','boundary youlose');
         
@@ -38,10 +39,12 @@ window.onload = function(){
     var mazeEnd = document.getElementById('end');
     mazeEnd.addEventListener('mouseover', function(){
 		if(gameStatus === true){
-		alert('You WIN!');
+		//alert('You WIN!');
+		document.getElementById("status").innerHTML = "You WIN!";
 		}
 		else{
-		    alert('HaHa Nice Try!, You Already Lost!');
+		    //alert('HaHa Nice Try!, You Already Lost!');
+		    document.getElementById("status").innerHTML = "HaHa Nice Try!, You Already Lost!";
 		}
 	
 	});
@@ -51,7 +54,8 @@ window.onload = function(){
     //resets game by pressing "S", prompts user game has been reset
     var startButton = document.getElementById("start");
     startButton.addEventListener('click', function(){
-        alert('Game reset!');
+        //alert('Game reset!');
+        document.getElementById("status").innerHTML = "Game reset!";
         gameStatus = true;
         for (var i = 0; i < boundaries.length; i++) {
         boundaries[i].setAttribute('class','boundary');
